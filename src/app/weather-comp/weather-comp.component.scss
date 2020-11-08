@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    overflow-x: hidden;
+    font-family: 'Inter';
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.title-cont{
+    background-image: url('../../assets/cardimg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 220px;
+    align-self:center;
+    text-align:center;
+}
+
+.title-cont-header{
+  padding-top: 20px;
+}
+
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.input-container{
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+
+h1{
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 25px;
+}
+
+input{
+    display: block;
+    height: 30px;
+    font-size:25px;
+}
+
+.agm-map {
+  height: 300px;
+}
+
+label{
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+img.bg{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+button.submit {
+    margin-top: 50px;
+    margin-right: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 200px;
+}
+
+form div {
+    float: left; 
+}
+
+#map{
+    height: 50%;
+}

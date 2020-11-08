@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./weather-comp.component.scss">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu9-z4fqLnH8OdWy-E_RkHvrysk3V7-kU"></script>
+
+</head>
+
+<body>
+    <img src="assets/bgimage.jpg" class="bg">
+    <div class="main-container">
+        <div class="title-cont">
+            <div class="title-cont-header">
+                <h1>Weather-App</h1>
+                <h2>Jacek Zołotar & Krzysztof Berda</h2>
+            </div>
+        </div>
+    </div>
+    <div class="weather-container">
+        <div class="input-container">
+            <form [formGroup]="weatherinput" (ngSubmit)="onSubmit()" class="form-input">
+                <div>
+                    <label>
+                        Location:
+                        <input type="text" formControlName="location">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Date:
+                        <input type="text" formControlName="date">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Time:
+                        <input type="text" formControlName="time">
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="map-container">
+            <google-map></google-map>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

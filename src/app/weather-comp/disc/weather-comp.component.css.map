@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,IAAI;CACzB",
+    "sources": [
+        "../weather-comp.component.scss"
+    ],
+    "names": [],
+    "file": "weather-comp.component.css"
+}
