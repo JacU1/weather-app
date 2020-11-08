@@ -1,14 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { } from 'googlemaps';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { WeatherCompComponent } from './weather-comp/weather-comp.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GoogleMapsModule } from '@angular/google-maps'
-
-
 
 @NgModule({
   declarations: [
@@ -20,8 +15,8 @@ import { GoogleMapsModule } from '@angular/google-maps'
     RouterModule.forRoot([
       { path: '', component: WeatherCompComponent }
     ]),
-    ReactiveFormsModule,
-    GoogleMapsModule
+    //'AIzaSyAu9-z4fqLnH8OdWy-E_RkHvrysk3V7-kU',
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

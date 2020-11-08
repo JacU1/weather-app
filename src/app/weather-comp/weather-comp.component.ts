@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 
@@ -13,8 +13,20 @@ export class WeatherCompComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
+    
   }
+
+  @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
+  map: google.maps.Map;
+  lat = 40.73061;
+  lng = -73.935242;
+
+  coordinates = new google.maps.LatLng(this.lat, this.lng);
+
+  mapOptions: google.maps.MapOptions = {
+   center: this.coordinates,
+   zoom: 8
+  };
 
   weatherinput = new FormGroup(
     {
@@ -24,8 +36,13 @@ export class WeatherCompComponent implements OnInit {
     }
   )
 
-  newfunction() {
+  ngAfterViewInit() {
+    this.mapInitializer();
+  }
 
+  mapInitializer() {
+    this.map = new google.maps.Map(this.gmap.nativeElement, 
+    this.mapOptions);
   }
 
   onSubmit() {
