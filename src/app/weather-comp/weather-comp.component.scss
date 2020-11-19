@@ -8,7 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 
 .title-cont{
@@ -22,28 +22,31 @@ body{
 }
 
 .title-cont-header{
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .weather-container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .input-container{
     background-color: white;
     padding-bottom: 10px;
+    width: inherit;
 }
 
 .maps-contaier-class{
     height: 500px;
-    width: 500px;
+    width: 80%;
+    margin-top: 20px;
 }
 #map {
     height: 500px;
-    width: 100%;
+    width: 50%;
    }
 h1{
     font-size: 50px;
@@ -56,15 +59,15 @@ h2{
 
 input{
     display: block;
-    height: 30px;
-    font-size:25px;
+    height: 25px;
+    font-size:20px;
 }
 
 
 label{
     display: block;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 23px;
+    padding: 10px;
     margin-right: 20px;
     margin-left: 20px;
 }
@@ -82,11 +85,11 @@ img.bg{
 }
 
 button.submit {
-    margin-top: 50px;
-    margin-right: 20px;
     font-size: 20px;
     height: 40px;
     width: 200px;
+    margin-top: 32px;
+    margin-right: 20px;
 }
 
 form div {
