@@ -15,7 +15,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot([
       { path: '', component: WeatherCompComponent }
     ]),
-    //'AIzaSyAu9-z4fqLnH8OdWy-E_RkHvrysk3V7-kU',
     ReactiveFormsModule
   ],
   providers: [],
