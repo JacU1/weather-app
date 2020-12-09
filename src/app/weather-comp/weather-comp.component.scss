@@ -40,14 +40,139 @@ body{
 }
 
 .maps-contaier-class{
+    display: flex;
     height: 500px;
-    width: 80%;
+    width: 60%;
     margin-top: 20px;
 }
 #map {
     height: 500px;
-    width: 50%;
+    width: 40%;
    }
+
+.weather_panel{
+    margin-left: 30px;
+    width: 30%;
+    background-color: white;
+}
+
+.icon_panel{
+    display: flex;
+    width: 35%;
+    background-color: white;
+}
+
+.icon_panel img {
+    height: 200px;
+    width: 200px;
+    padding-top: 70px;
+}
+
+.icon_panel label{
+    font-size: 30px;
+    padding-top: 150px;
+}
+
+.location_label{
+    height: 50px;
+    width: 30%;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.location_clock{
+    display: flex;
+    height: 320px;
+    width: 55%;
+    background-color: white;
+}
+
+.clock {
+  background: #f24 url(/assets/ios_clock.svg) no-repeat center;
+  background-size: 80%;
+  height: 20em;
+  position: relative;
+  width: 20em;
+  z-index: 1;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-top: 10px;
+}
+
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+
+.hours {
+  background: #000;
+  height: 15%;
+  left: 48.75%;
+  position: absolute;
+  top: 37%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+
+.minutes {
+  background: #000;
+  height: 22%;
+  left: 49%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+
+.seconds {
+  background: #000;
+  height: 27%;
+  left: 49.5%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container div {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container div {
+  animation: rotate 3600s infinite linear;
+}
+.seconds-container div {
+  animation: rotate 60s infinite linear;
+}
+
+.location_button{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    height: 70px;
+    background-color: white;
+}
+
+.location_button button{
+    margin-top: 10px;
+    width: 20em;
+    height: 50px;
+}
+
 h1{
     font-size: 50px;
     text-decoration: underline;
@@ -72,6 +197,11 @@ label{
     margin-left: 20px;
 }
 
+h2{
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 img.bg{
     position: absolute; 
