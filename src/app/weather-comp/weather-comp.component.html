@@ -47,23 +47,25 @@
                 </div>
             </form>
         </div>
-        <div class="maps-contaier-class">
-            <div id="map" class="map"></div>
+        <div id='maps-contaier-class' class="maps-contaier-class">
+            <div id="map"></div>
+            <div class="icon_weather_panel">
             <div class="weather_panel">
                 <h1 style="text-decoration: none; margin-left: 30px;">Weather Panel</h1>
-                <label style="float: left;">Temperature:</label>
-                <h2>test</h2>
-                <label style="float: left;">Location:</label>
-                <h2>test</h2>
-                <label style="float: left;">Date:</label>
-                <h2>test</h2>
-                <label style="float: left;">Time:</label>
-                <h2>test</h2>
+                <label>Temperature:</label>
+                <h2 id="inner_temp"></h2>
+                <label>Location:</label>
+                <h2 id="inner_location"></h2>
+                <label>Date:</label>
+                <h2 id="inner_date"></h2>
+                <label>Time:</label>
+                <h2 id="inner_time"></h2>
             </div>
             <div class="icon_panel">
-                <img src="assets/sun2.png">
-                <label>Sunny weather</label>
+                <img id='icon_mod'>
+                <label id="weather-label"></label>
             </div>
+        </div>
         </div>
         <div class="location_label">
             <label>Choose location:</label>
