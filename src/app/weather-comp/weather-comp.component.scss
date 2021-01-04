@@ -12,18 +12,26 @@ body{
 }
 
 .title-cont{
-    background-image: url('../../assets/cardimg2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 700px;
     height: 220px;
     align-self:center;
     text-align:center;
+    background-color: #2561a0;
+    border: 3px solid black;
+    border-radius: 15px;
 }
 
 .title-cont-header{
   padding-top: 10px;
 }
+
+.title-cont-header h1 {
+   color: white;
+}
+
+.title-cont-header h2 {
+    color: white;
+ }
 
 .weather-container{
     display: flex;
@@ -34,9 +42,15 @@ body{
 }
 
 .input-container{
-    background-color: white;
+    background-color: #2561a0;
     padding-bottom: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
     width: inherit;
+}
+
+.input-container label{
+    color: white;
 }
 
 .maps-contaier-class{
@@ -97,99 +111,31 @@ body{
 .location_label{
     height: 50px;
     width: 30%;
-    background-color: white;
+    background-color: #2561a0;
     margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid black;
+    border-radius: 15px;
 }
 
-.location_clock{
-    display: flex;
-    height: 320px;
-    width: 55%;
-    background-color: white;
-}
-
-.clock {
-  background: #f24 url(/assets/ios_clock.svg) no-repeat center;
-  background-size: 80%;
-  height: 20em;
-  position: relative;
-  width: 20em;
-  z-index: 1;
-  margin-left: 22px;
-  margin-right: 22px;
-  margin-top: 10px;
-}
-
-.clock.simple:after {
-  background: #000;
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 5%;
-  height: 5%;
-  z-index: 10;
-}
-
-.hours {
-  background: #000;
-  height: 15%;
-  left: 48.75%;
-  position: absolute;
-  top: 37%;
-  transform-origin: 50% 100%;
-  width: 2.5%;
-}
-
-.minutes {
-  background: #000;
-  height: 22%;
-  left: 49%;
-  position: absolute;
-  top: 30%;
-  transform-origin: 50% 100%;
-  width: 2%;
-}
-
-.seconds {
-  background: #000;
-  height: 27%;
-  left: 49.5%;
-  position: absolute;
-  top: 30%;
-  transform-origin: 50% 80%;
-  width: 1%;
-  z-index: 8;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-.hours-container div {
-  animation: rotate 43200s infinite linear;
-}
-.minutes-container div {
-  animation: rotate 3600s infinite linear;
-}
-.seconds-container div {
-  animation: rotate 60s infinite linear;
+.location_label label{
+    color: white;
+    text-align: center;
 }
 
 .location_button{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 55%;
     height: 70px;
-    background-color: white;
+    background-color: #2561a0;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .location_button button{
-    margin-top: 10px;
     width: 20em;
     height: 50px;
 }

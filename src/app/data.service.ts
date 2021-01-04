@@ -23,4 +23,11 @@ export class DataService {
     return this.httpClient.get(url);
   }
 
+  public getFutureWeather (lat,lon){
+
+    let url = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=hourly,minutely&appid=5ddf46564e9720543dbcb98d718f7e19'
+
+    return this.httpClient.get(url);
+  }
+
 }

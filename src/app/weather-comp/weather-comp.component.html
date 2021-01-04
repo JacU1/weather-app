@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <img src="assets/bgimage.jpg" class="bg">
+    <img src="assets/bg2.jpg" class="bg">
     <div class="main-container">
         <div class="title-cont">
             <div class="title-cont-header">
@@ -70,69 +70,12 @@
         <div class="location_label">
             <label>Choose location:</label>
         </div>
-        <div class="location_clock">
-            <article class="clock">
-                <div class="hours-container">
-                    <div class="hours"></div>
-                </div>
-                <div class="minutes-container">
-                    <div class="minutes"></div>
-                </div>
-                <div class="seconds-container">
-                    <div class="seconds"></div>
-                </div>
-            </article>
-            <article class="clock">
-                <div class="hours-container">
-                    <div class="hours"></div>
-                </div>
-                <div class="minutes-container">
-                    <div class="minutes"></div>
-                </div>
-                <div class="seconds-container">
-                    <div class="seconds"></div>
-                </div>
-            </article>
-            <article class="clock">
-                <div class="hours-container">
-                    <div class="hours"></div>
-                </div>
-                <div class="minutes-container">
-                    <div class="minutes"></div>
-                </div>
-                <div class="seconds-container">
-                    <div class="seconds"></div>
-                </div>
-            </article>
-            <article class="clock">
-                <div class="hours-container">
-                    <div class="hours"></div>
-                </div>
-                <div class="minutes-container">
-                    <div class="minutes"></div>
-                </div>
-                <div class="seconds-container">
-                    <div class="seconds"></div>
-                </div>
-            </article>
-            <article class="clock">
-                <div class="hours-container">
-                    <div class="hours"></div>
-                </div>
-                <div class="minutes-container">
-                    <div class="minutes"></div>
-                </div>
-                <div class="seconds-container">
-                    <div class="seconds"></div>
-                </div>
-            </article>
-        </div>
-        <div class="location_button">
-            <button>Londyn</button>
-            <button>Warszawa</button>
-            <button>Nowy York</button>
-            <button>Sydney</button>
-            <button>Moskwa</button>
+        <div class="location_button" id='location_button_id'>
+            <button id="london_btn" (click)="onLocation('london')">London</button>
+            <button id="warsaw_btn" (click)="onLocation('Warsaw')">Warsaw</button>
+            <button id="newyork_btn" (click)="onLocation('New York')">New York</button>
+            <button id="sydney_btn" (click)="onLocation('Sydney')">Sydney</button>
+            <button id="moscow_btn" (click)="onLocation('Moscow')">Moscow</button>
         </div>
     </div>
 </body>
