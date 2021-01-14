@@ -83,49 +83,7 @@ export class WeatherCompComponent implements OnInit {
 
     return Math.floor(C);
   }
-  /*
-  setdata = (options) => {
-    let temp = this.convertKtoC(res1['current']['temp']);
-
-    document.getElementById('inner_location').innerText = res['name'];
-    document.getElementById('inner_temp').innerText = temp.toString() + ' °C';
-
-    document.getElementById('inner_date').innerText = date ? date : new Date().toISOString().slice(0,10); 
-    document.getElementById('inner_time').innerText = time ? time : this.getLocalTime(res1['timezone']); 
-
-
-    let info = res1['current']['weather'].map(a => a.description).toString();
-    console.log(info);
-
-    document.getElementById('weather-label').innerText = info;
-    
-    switch(info){
-      case 'overcast clouds' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/cloud1.PNG');
-        break;
-      case 'clear sky' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/bigrain.png');
-        break;
-      case 'broken clouds' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/brokenclouds.PNG');
-        break;
-      case 'scattered clouds' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/scattered clouds.PNG');
-        break;
-      case 'few clouds' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/cloud1.PNG');
-        break;
-      case 'light rain' :
-        document.getElementById('icon_mod').setAttribute('src', 'assets/rain.PNG');
-        break;
-      case 'light snow' : 
-        document.getElementById('icon_mod').setAttribute('src', 'assets/rain.PNG');
-        break;
-    }
-    this.mapchangehandler(res['coord']['lon'],res['coord']['lat']);
-  }
-  */
-
+  
   weatherApihandler = (location, dateTime,date,time) => {
     this.dataservice.getWeather(location).subscribe((res) => {
       this.dataservice.getHistoryWeather(res['coord']['lat'],res['coord']['lon'],dateTime).subscribe((res1) =>{
@@ -138,7 +96,8 @@ export class WeatherCompComponent implements OnInit {
   
         document.getElementById('inner_date').innerText = date ? date : new Date().toISOString().slice(0,10); 
         document.getElementById('inner_time').innerText = time ? time : this.getLocalTime(res1['timezone']); 
-  
+        
+        document.getElementById('inner_wind').innerText = 'test';
 
         let info = res1['current']['weather'].map(a => a.description).toString();
         console.log(info);
@@ -166,6 +125,12 @@ export class WeatherCompComponent implements OnInit {
             break;
           case 'light snow' : 
             document.getElementById('icon_mod').setAttribute('src', 'assets/rain.PNG');
+            break;
+          case 'thunderstorm with rain,moderate rain' :
+            document.getElementById('icon_mod').setAttribute('src', 'assets/rain.PNG');
+            break;
+          case 'clear sky' :
+            document.getElementById('icon_mod').setAttribute('src', 'assets/sun2.PNG');
             break;
         }
         this.mapchangehandler(res['coord']['lon'],res['coord']['lat']);
@@ -200,6 +165,7 @@ export class WeatherCompComponent implements OnInit {
     let newTime = '06:00';
     let date =  todayDate + 'T' + newTime + ':00.000Z';
     let dateTime = parseInt((new Date(date).getTime() / 1000).toFixed(0));
+    console.log(date,dateTime);
 
     this.weatherApihandler(location,dateTime,'','');    
   }

@@ -4,6 +4,11 @@ body{
     overflow-x: hidden;
     font-family: 'Inter';
 }
+
+button {
+
+}
+
 .main-container{
     display: flex;
     justify-content: center;
@@ -61,12 +66,12 @@ body{
 }
 #map {
     height: 500px;
-    width: 40%;
+    width: 50%;
    }
 
 .icon_weather_panel{
     display: flex;
-    width: 65%;
+    width: 50%;
     border: 3px solid black;
     border-radius: 15px;
     margin-left: 30px;
@@ -85,7 +90,7 @@ body{
 
 
 .weather_panel{
-    width: 50%;
+    width: 33%;
 }
 
 .weather_panel label{
@@ -94,18 +99,17 @@ body{
 
 .icon_panel{
     display: flex;
-    width: 50%;
+    width: 40%;
+    align-items: center;
 }
 
 .icon_panel img {
     height: 200px;
     width: 200px;
-    padding-top: 70px;
 }
 
 .icon_panel label{
     font-size: 30px;
-    padding-top: 150px;
 }
 
 .location_label{
@@ -137,16 +141,32 @@ body{
 
 .location_button button{
     width: 20em;
-    height: 50px;
+    height: 60px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+    font-size: large;
+    transition-duration: 0.4s;
+}
+
+.location_button button:hover {
+    background-color: #2561a0;
+    color: white;
+  }
+
+.weather_panel_2{
+    width: 33%;
+    margin-top: 185px;
+}
+
+.weather_panel_2 label{
+    float: left;
 }
 
 h1{
     font-size: 50px;
     text-decoration: underline;
-}
-
-h2{
-    font-size: 25px;
 }
 
 input{
@@ -158,17 +178,17 @@ input{
 
 label{
     display: block;
-    font-size: 23px;
+    font-size: 21px;
     padding: 10px;
     margin-right: 20px;
     margin-left: 20px;
 }
 
 h2{
+    font-size: 25px;
     padding: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
 }
+
 
 img.bg{
     position: absolute; 
@@ -185,9 +205,17 @@ button.submit {
     font-size: 20px;
     height: 40px;
     width: 200px;
-    margin-top: 32px;
+    margin-top: 30px;
     margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition-duration: 0.4s;
 }
+
+button:hover {
+    background-color: #2561a0;
+    color: white;
+  }
 
 form div {
     float: left; 
