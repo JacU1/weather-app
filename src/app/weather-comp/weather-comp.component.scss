@@ -5,10 +5,6 @@ body{
     font-family: 'Inter';
 }
 
-button {
-
-}
-
 .main-container{
     display: flex;
     justify-content: center;
@@ -90,7 +86,7 @@ button {
 
 
 .weather_panel{
-    width: 33%;
+    width: 50%;
 }
 
 .weather_panel label{
@@ -99,7 +95,7 @@ button {
 
 .icon_panel{
     display: flex;
-    width: 40%;
+    width: 50%;
     align-items: center;
 }
 
@@ -155,15 +151,6 @@ button {
     color: white;
   }
 
-.weather_panel_2{
-    width: 33%;
-    margin-top: 185px;
-}
-
-.weather_panel_2 label{
-    float: left;
-}
-
 h1{
     font-size: 50px;
     text-decoration: underline;
@@ -186,7 +173,6 @@ label{
 
 h2{
     font-size: 25px;
-    padding: 10px;
 }
 
 
@@ -220,4 +206,3 @@ button:hover {
 form div {
     float: left; 
 }
-

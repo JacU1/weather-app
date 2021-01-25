@@ -5,6 +5,14 @@ import { RouterModule } from '@angular/router';
 import { WeatherCompComponent } from './weather-comp/weather-comp.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {DpDatePickerModule} from 'ng2-date-picker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,8 +21,16 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
+    DpDatePickerModule,
     HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    NgxMaterialTimepickerModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: WeatherCompComponent }
     ]),

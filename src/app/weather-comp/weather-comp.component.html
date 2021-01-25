@@ -32,20 +32,29 @@
                 </div>
                 <div>
                     <label>
-                        Date:
-                        <input type="text" formControlName="date">
-                    </label>
-                </div>
-                <div>
-                    <label>
                         Time:
-                        <input type="text" formControlName="time">
+                        <mat-form-field>
+                            <input matInput formControlName="time" [ngxTimepicker]="toggleTimepicker" (ngModelChange)="OnTimeChange($event)" [format]="24">
+                            <ngx-material-timepicker-toggle matSuffix [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+                            <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+                          </mat-form-field>
+                    </label>
+                </div>
+                <div> 
+                    <label>
+                        Date:
+                        <mat-form-field>
+                            <input matInput formControlName="date" [matDatepicker]="picker1" (ngModelChange)="OnDateChange($event)">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1 ></mat-datepicker>
+                        </mat-form-field>
                     </label>
                 </div>
                 <div>
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" class="submit" >Submit</button>
                 </div>
             </form>
+            <button type="submit" class="submit" (click) = "onReset()">Reset</button>
         </div>
         <div id='maps-contaier-class' class="maps-contaier-class">
             <div id="map"></div>
@@ -60,12 +69,10 @@
                 <h2 id="inner_date"></h2>
                 <label>Time:</label>
                 <h2 id="inner_time"></h2>
-            </div>
-            <div class="weather_panel_2">
                 <label>Wind:</label>
                 <h2 id="inner_wind"></h2>
                 <label>Presure:</label>
-                <h2 id="inner_presure"></h2>
+                <h2 id="inner_presure">test</h2>
             </div>
             <div class="icon_panel">
                 <img id='icon_mod'>
@@ -77,11 +84,11 @@
             <label>Choose location:</label>
         </div>
         <div class="location_button" id='location_button_id'>
-            <button id="london_btn" (click)="onLocation('london')">London</button>
-            <button id="warsaw_btn" (click)="onLocation('Warsaw')">Warsaw</button>
-            <button id="newyork_btn" (click)="onLocation('New York')">New York</button>
-            <button id="sydney_btn" (click)="onLocation('Sydney')">Sydney</button>
-            <button id="moscow_btn" (click)="onLocation('Moscow')">Moscow</button>
+            <button id="london_btn" (click)="onLocation('london','Europe/London')">London</button>
+            <button id="warsaw_btn" (click)="onLocation('Warsaw','Europe/Warsaw')">Warsaw</button>
+            <button id="newyork_btn" (click)="onLocation('New York','America/New_York')">New York</button>
+            <button id="sydney_btn" (click)="onLocation('Sydney','Australia/Sydney')">Sydney</button>
+            <button id="moscow_btn" (click)="onLocation('Moscow','Europe/Moscow')">Moscow</button>
         </div>
     </div>
 </body>
